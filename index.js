@@ -12,4 +12,14 @@ bodyElement.addEventListener('mousemove', (event) => {
 
   //coloca a span no body
   bodyElement.appendChild(spanElement);
+
+  //randomizar tamanho
+  const size = Math.random() * 100;
+  spanElement.style.width = size + 'px';
+  spanElement.style.height = size +'px';
+
+  //remover span depois de 2s
+  setTimeout(() => {
+    spanElement.remove();
+  }, 2000);
 });
